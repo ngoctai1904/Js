@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quy đổi</title>
+</head>
+<style>
+    body {
+        display: flex;
+        justify-content: center;
+        padding-top:150px ;
+    }
+</style>
+<body>
+    <input type="text" id="input">
+    <select name="" id="inputPrice">
+        <option value="vnd">VND</option>
+        <option value="usd">USD</option>
+        <option value="yen">YEN</option>
+    </select>
+    <select name="" id="outputPrice">
+        <option value="vnd">VND</option>
+        <option value="usd">USD</option>
+        <option value="yen">YEN</option>
+    </select>
+    <button onclick="exchange()">Convert</button>
+    <script>
+        function exchange(){
+            let value= document.getElementById('input').value;
+            let inputPrice = document.getElementById('inputPrice').value;
+            let outputPrice = document.getElementById('outputPrice').value;
+            // const prices = [];
+            if(inputPrice == outputPrice){
+                alert(value);
+            }
+            if(inputPrice == "vnd" && outputPrice == "usd"){
+                alert(value/24000);
+            }
+            if(inputPrice == "vnd" && outputPrice == "yen"){
+                alert(value/170);
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Máy Tính</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <style>
+        body{
+            padding-top: 150px;
+        }
+    </style>
+<div class="calculator">
+    <div class="calculator__display">0</div>
+    <div class="calculator__keys">
+        <button class="key--operator" data-action="add">+</button>
+        <button class="key--operator" data-action="subtract">-</button>
+        <button class="key--operator" data-action="multiply">&times;</button>
+        <button class="key--operator" data-action="divide">÷</button>
+        <button>7</button>
+        <button>8</button>
+        <button>9</button>
+        <button class="key--equal" data-action="calculate">=</button>
+        <button>5</button>
+        <button>6</button>
+        <button>4</button>
+        <button>1</button>
+        <button>2</button>
+        <button>3</button>
+        <button>0</button>
+        <button data-action="decimal">.</button>
+        <button data-action="clear">AC</button>
+    </div>
+</div>
+<script src="main.js"></script>
+</body>
+</html>
+    <!-- <div class="container-grid">
+        <div id="result"></div>
+        <div class="calculate">
+            <div class="number">
+                <button class="btn" value="7">7</button>
+                <button class="btn" value="8">8</button>
+                <button class="btn" value="9">9</button>
+                <button class="btn" value="4">4</button>
+                <button class="btn" value="5">5</button>
+                <button class="btn" value="6">6</button>
+                <button class="btn" value="7">1</button>
+                <button class="btn" value="7">2</button>
+                <button class="btn" value="7">3</button>
+                <button class="btn" value="0">0</button>
+                <button class="btn" value=".">.</button>
+            </div>
+
+            <div class="operation">
+                <button class="btn" onclick="undo()">DEL</button>
+                <button class="btn" onclick="clean()">AC</button>
+                <button class="btn" value="*">x</button>
+                <button class="btn" value="/">/</button>
+                <button class="btn" value="+">+</button>
+                <button class="btn" value="-">-</button>
+                <button class="btn" onclick="equal()">=</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        const numbers = document.getElementsByClassName('btn');
+        const result = document.getElementById("result");
+        for (let number of number){
+            number.addEventListener('clink',function(){
+                result.innerHTML += this.value
+            });
+        }
+        function equal(){
+            let rel =result.innerHTML
+            let output = eval(res)
+            result.innerHTML = output
+        }
+        function clean(){
+            result.innerHTML =""
+        }
+        function undo(){
+            let res =result.innerHTML
+            result.innerHTML = res.substring(0,res.length -1);
+        }
+    </script> -->
+<!-- </body>
+</html> -->

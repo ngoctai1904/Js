@@ -1,0 +1,93 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Chu vi và Diện tích</title>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css"/>
+</head>
+<style>
+    body {
+    display: flex;
+    justify-content: center;
+    }
+</style>
+<body translate="no">
+    <div class="container-fluid">
+    <ul class="nav nav-tabs">
+        <li><a data-toggle="tab" href="#square">Square</a></li>
+        <li><a data-toggle="tab" href="#circle">Circle</a></li>
+        <li><a data-toggle="tab" href="#triangle">Triangle</a></li>
+        <li><a data-toggle="tab" href="#trapezium">Trapezium</a></li>
+    </ul>
+
+    <div class="tab-content">
+        <div id="square" class="tab-pane fade">
+        <h2>Square</h2>
+        <form name="formsquare">
+            <input
+            type="text"
+					class="form-control searchBox"
+					placeholder="0.00"
+                    oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1').replace(/^0[^.]/, '0');"
+					id="edge"
+            type="number"
+            name="edge"
+            placeholder="edge"
+            /><br />
+            <input type="button" value="Submit" onclick="square()" />
+            <p id="perimeter"></p>
+            <p id="area"></p>
+        </form>
+        
+        </div>
+        <div id="circle" class="tab-pane fade">
+        <h2>Circle</h2>
+        <form name="formcircle">
+            <input
+            class="form-control searchBox"
+            placeholder="0.00"
+            oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1').replace(/^0[^.]/, '0');"
+            id="radius"
+            type="number"
+            name="radius"
+            placeholder="radius"
+            /><br />
+            <input type="button" value="Submit" onclick="circle()" />
+            <p id="perimetercircle"></p>
+            <p id="areacrircle"></p>
+        </form>
+        </div>
+
+        <div id="triangle" class="tab-pane fade">
+        <h2>triangle</h2>
+        <form name="formtriangle">
+            <input type="number" name="a" id="a" placeholder="edge a" /><br />
+            <input type="number" name="b" id="b" placeholder="edge b" /><br />
+            <input type="number" name="c" id="c" placeholder="edge c" /><br />
+            <input type="button" value="Submit" onclick="triangle()" />
+            <p id="perimetertriangle"></p>
+            <p id="areatriangle"></p>
+        </form>
+        </div>
+
+        <div id="trapezium" class="tab-pane fade">
+        <h2>trapezium</h2>
+        <form name="formtrapezium">
+            <input type="number" name="a" id="a" placeholder="edge a" /><br />
+            <input type="number" name="b" id="b" placeholder="edge b" /><br />
+            <input type="number" name="c" id="c" placeholder="edge c" /><br />
+            <input type="number" name="d" id="d" placeholder="edge d" /><br />
+            <input type="number" name="h" id="h" placeholder="edge h" /><br />
+            <input type="button" value="Submit" onclick="trapezium()" />
+            <p id="perimetertrapezium"></p>
+            <p id="areatrapezium"></p>
+        </form>
+        </div>
+    </div>
+    <script src="main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </div>
+</body>
+</html>
